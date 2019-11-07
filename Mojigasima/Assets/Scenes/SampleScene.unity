@@ -349,6 +349,8 @@ GameObject:
   - component: {fileID: 820890120}
   - component: {fileID: 820890123}
   - component: {fileID: 820890124}
+  - component: {fileID: 820890125}
+  - component: {fileID: 820890126}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -428,7 +430,7 @@ Transform:
   m_GameObject: {fileID: 820890119}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.353, y: -2.15, z: -1.0429379}
-  m_LocalScale: {x: 1.018, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -480,6 +482,37 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.8, y: 0.8}
   m_EdgeRadius: 0
+--- !u!95 &820890125
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 820890119}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e7a242723fcfbc54a977f4da4d946eda, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &820890126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 820890119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 846e461431fb546458b3763aa279ddc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &895570761
 GameObject:
   m_ObjectHideFlags: 0
@@ -1173,7 +1206,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1451691196}
-  - component: {fileID: 1451691197}
   m_Layer: 0
   m_Name: field Item
   m_TagString: Untagged
@@ -1199,22 +1231,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1451691197
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1451691195}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46ee274f7f56b864e93e38fbd0d4489f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoziKE: {fileID: 1002678123}
-  MoziNN: {fileID: 1051962068}
-  MoziDA: {fileID: 1232142653}
-  MoziMa: {fileID: 1175521197}
 --- !u!1 &1460809772
 GameObject:
   m_ObjectHideFlags: 0
