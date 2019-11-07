@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerAnimator : MonoBehaviour
 {
     Animator animator;
-    public float count = 0;
+    public float count = 100;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,10 +21,14 @@ public class PlayerAnimator : MonoBehaviour
             animator.SetBool("attack",true);
             Debug.Log("ATTACK");
             count = 0;
+            PlayerManeger.attack1 = true;
+            PlayerManeger.attack2 = false;
         }
-        if (count > 100)
+        if (count >= 100)
         {
             animator.SetBool("attack",false);
+            PlayerManeger.attack1 = false;
+            PlayerManeger.attack2 = true;
         }
     }
 
