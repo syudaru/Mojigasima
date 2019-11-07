@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerAnimator : MonoBehaviour
 {
     Animator animator;
+    public float count = 100;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,10 +15,20 @@ public class PlayerAnimator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        count++;
         if (Input.GetKeyDown(KeyCode.Space))
         {
             animator.SetBool("attack",true);
             Debug.Log("ATTACK");
+            count = 0;
+            PlayerManeger.attack1 = true;
+            PlayerManeger.attack2 = false;
+        }
+        if (count >= 100)
+        {
+            animator.SetBool("attack",false);
+            PlayerManeger.attack1 = false;
+            PlayerManeger.attack2 = true;
         }
     }
 
