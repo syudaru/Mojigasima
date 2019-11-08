@@ -6,6 +6,9 @@ public class KENDAMAManeger : MonoBehaviour
 {
     public GameObject KENDAMA = null;
     public GameObject PlayerAttack = null;
+    public GameObject KENDAMAAttack = null;
+    public static bool attack1 = false;
+    public static bool attack2 = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +26,14 @@ public class KENDAMAManeger : MonoBehaviour
         if (!PlayerAnimator.normalAttack)
         {
             PlayerAttack.SetActive(false);
+        }
+        if (attack1)
+        {
+            KENDAMAAttack.SetActive(true);
+        }
+        if (attack2)
+        {
+            KENDAMAAttack.SetActive(false);
         }
 
     }

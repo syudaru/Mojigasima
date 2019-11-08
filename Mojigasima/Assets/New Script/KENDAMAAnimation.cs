@@ -28,10 +28,14 @@ public class KENDAMAAnimation : MonoBehaviour
                 animator.SetBool("KENDAMAAttack", true);
                 Debug.Log("KENDAMAATTACK");
                 count = 0;
+                KENDAMAManeger.attack1 = true;
+                KENDAMAManeger.attack2 = false;
             }
-            if (count >= 100)
+            if (count >= 200)
             {
                 animator.SetBool("KENDAMAAttack", false);
+                KENDAMAManeger.attack1 = false;
+                KENDAMAManeger.attack2 = true;
             }
         }
     }
