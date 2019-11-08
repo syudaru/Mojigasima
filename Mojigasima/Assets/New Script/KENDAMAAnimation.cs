@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerAnimator : MonoBehaviour
+public class KENDAMAAnimation : MonoBehaviour
 {
     Animator animator;
+    public GameObject KENDAMA = null;
     public float count = 100;
-    public static bool normalAttack = true;
+    public GameObject Player = null;
+    public Vector3 pos = Vector3.zero;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,23 +18,21 @@ public class PlayerAnimator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (normalAttack) {
-            count++;
+        transform.position = Player.transform.position + pos;
+        count++;
+        if (displayItemManeger.KENDAMA)
+        {
+            
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                animator.SetBool("attack", true);
-                Debug.Log("ATTACK");
+                animator.SetBool("KENDAMAAttack", true);
+                Debug.Log("KENDAMAATTACK");
                 count = 0;
-                PlayerManeger.attack1 = true;
-                PlayerManeger.attack2 = false;
             }
             if (count >= 100)
             {
-                animator.SetBool("attack", false);
-                PlayerManeger.attack1 = false;
-                PlayerManeger.attack2 = true;
+                animator.SetBool("KENDAMAAttack", false);
             }
         }
     }
-
 }

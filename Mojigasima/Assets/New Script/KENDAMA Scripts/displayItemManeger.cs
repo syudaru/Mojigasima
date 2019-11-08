@@ -8,6 +8,7 @@ public class displayItemManeger : MonoBehaviour
     public GameObject MoziDA = null;
     public GameObject MoziKE = null;
     public GameObject MoziNN = null;
+    public static bool KENDAMA = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +33,11 @@ public class displayItemManeger : MonoBehaviour
         if (fieldItemNN.displayNN)
         {
             MoziNN.SetActive(true);
+        }
+        if (fieldItemDA.displayDA && fieldItemNN.displayNN && fieldItemKE.displayKE && fieldItemMA.displayMA)
+        {
+            KENDAMA = true;
+            PlayerAnimator.normalAttack = false;
         }
     }
 }
