@@ -51,7 +51,6 @@ public class Move : MonoBehaviour
      void FixedUpdate()
     {
         rbody.velocity = new Vector2(vx, rbody.velocity.y);
-        this.GetComponent<SpriteRenderer>().flipX = leftflag;
         if (jumpflag)
         {
             jumpflag = false;
