@@ -17,6 +17,6 @@ public class jumpEnemy : MonoBehaviour
     void Update()
     {
         this.transform.Translate(speed / 50, 0, 0);
-        this.transform.Translate( 0, speed / 50, 0);
+        this.transform.Translate( 0, jump / 50, 0);
     }
 }

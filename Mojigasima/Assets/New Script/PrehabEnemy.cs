@@ -8,16 +8,17 @@ public class PrehabEnemy : MonoBehaviour
     // メンバ変数宣言
     public GameObject bulletPrefab; // 弾のプレハブ
     public float time; // 経過時間(秒)
-
+    public float speed = 2;
     // 毎フレーム呼び出されるメソッド
 
     void Update()
     {
-        time += Time.deltaTime;
+        this.transform.Translate(speed / 50, 0, 0);
+    time += Time.deltaTime;
         // １秒ごとに弾を発射
-        if (time > 1.0f)
+        if (time > 2.0f)
         { // 経過時間が１秒より大きければ経過時間をリセット
-            time -= 1.0f;
+            time -= 2.0f;
             GameObject obj;
             obj = Instantiate(bulletPrefab);
             obj.transform.position = transform.position;

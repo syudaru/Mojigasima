@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class Camera : MonoBehaviour
 {
-    private GameObject player;
+    public GameObject player;
     private Vector3 offset;
     // Use this for initialization
     void Start()
     {
-        this.player = GameObject.Find("Player");
+        this.player = GameObject.Find("player");
         offset = transform.position - player.transform.position;
     }
     void Update()
