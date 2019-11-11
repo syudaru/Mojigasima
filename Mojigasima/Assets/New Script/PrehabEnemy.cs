@@ -25,4 +25,19 @@ public class PrehabEnemy : MonoBehaviour
             obj.name = "EnemyBullet";
         }
     }
+    void OnBecameInvisible()
+
+    {
+
+        enabled = false;
+
+    }
+
+    void OnBecameVisible()
+
+    {
+
+        enabled = true;
+
+    }
 }

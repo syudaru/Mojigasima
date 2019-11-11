@@ -4,11 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-<<<<<<< HEAD
   - Enemy
-=======
   - field KE
->>>>>>> develop
   layers:
   - Default
   - TransparentFX
@@ -43,11 +40,8 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Back Ground
-    uniqueID: 3579903537
-    locked: 0
-  - name: demiBackGround
-    uniqueID: 1539616785
+  - name: BackGround
+    uniqueID: 2047744529
     locked: 0
   - name: Default
     uniqueID: 0
