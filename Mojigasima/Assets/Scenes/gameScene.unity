@@ -214,6 +214,8 @@ GameObject:
   - component: {fileID: 38146103}
   - component: {fileID: 38146102}
   - component: {fileID: 38146108}
+  - component: {fileID: 38146109}
+  - component: {fileID: 38146110}
   m_Layer: 0
   m_Name: player
   m_TagString: Untagged
@@ -3452,7 +3454,7 @@ PrefabInstance:
     - target: {fileID: 3173765755255660426, guid: 99ab50bf84a09c7439b15955aa77c248,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1608416708135758428, guid: 99ab50bf84a09c7439b15955aa77c248,
         type: 3}
