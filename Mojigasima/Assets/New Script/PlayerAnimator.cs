@@ -6,6 +6,7 @@ public class PlayerAnimator : MonoBehaviour
 {
     Animator animator;
     public float count = 100;
+    private float time = 100;
     public static bool normalAttack = true;
     // Start is called before the first frame update
     void Start()
@@ -25,7 +26,7 @@ public class PlayerAnimator : MonoBehaviour
                 PlayerManeger.attack1 = true;
                 PlayerManeger.attack2 = false;
             }
-            if (count >= 100)
+            if (count >= time)
             {
                 animator.SetBool("PlayerAttack", false);
                 PlayerManeger.attack1 = false;

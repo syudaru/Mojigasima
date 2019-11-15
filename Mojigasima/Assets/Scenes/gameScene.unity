@@ -400,6 +400,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   count: 100
+  time: 120
 --- !u!95 &38146110
 Animator:
   serializedVersion: 3
