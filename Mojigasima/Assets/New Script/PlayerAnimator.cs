@@ -18,17 +18,16 @@ public class PlayerAnimator : MonoBehaviour
     {
         if (normalAttack) {
             count++;
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.UpArrow))
             {
-                animator.SetBool("attack", true);
-                Debug.Log("ATTACK");
+                animator.SetBool("PlayerAttack", true);
                 count = 0;
                 PlayerManeger.attack1 = true;
                 PlayerManeger.attack2 = false;
             }
             if (count >= 100)
             {
-                animator.SetBool("attack", false);
+                animator.SetBool("PlayerAttack", false);
                 PlayerManeger.attack1 = false;
                 PlayerManeger.attack2 = true;
             }

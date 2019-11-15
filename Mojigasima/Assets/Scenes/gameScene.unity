@@ -135,6 +135,8 @@ GameObject:
   - component: {fileID: 38146103}
   - component: {fileID: 38146102}
   - component: {fileID: 38146108}
+  - component: {fileID: 38146109}
+  - component: {fileID: 38146110}
   m_Layer: 0
   m_Name: player
   m_TagString: Untagged
@@ -306,6 +308,38 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneGoal: 
   sceneEnemy: 
+--- !u!114 &38146109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 38146101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 846e461431fb546458b3763aa279ddc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  count: 100
+--- !u!95 &38146110
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 38146101}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bf27cfa73aa1e434c9e549f2804a5c21, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &127741744
 GameObject:
   m_ObjectHideFlags: 0
@@ -454,7 +488,7 @@ SpriteRenderer:
   m_Size: {x: 1.02, y: 0.89}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &279910139
@@ -641,7 +675,7 @@ SpriteRenderer:
   m_Size: {x: 0.84, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &519420028
@@ -824,7 +858,7 @@ SpriteRenderer:
   m_Size: {x: 1.13, y: 1.1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &973436276
@@ -904,7 +938,7 @@ SpriteRenderer:
   m_Size: {x: 1.07, y: 0.7}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &981352223
@@ -984,7 +1018,7 @@ SpriteRenderer:
   m_Size: {x: 1.22, y: 0.91}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1286687502
@@ -1064,7 +1098,7 @@ SpriteRenderer:
   m_Size: {x: 1.13, y: 1.15}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1314305058
@@ -1322,7 +1356,7 @@ SpriteRenderer:
   m_Size: {x: 0.82, y: 0.82}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1496886556
@@ -1402,7 +1436,7 @@ SpriteRenderer:
   m_Size: {x: 1.17, y: 1.26}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1670690972
@@ -1735,7 +1769,7 @@ PrefabInstance:
     - target: {fileID: 3173765755255660426, guid: 99ab50bf84a09c7439b15955aa77c248,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1608416708135758428, guid: 99ab50bf84a09c7439b15955aa77c248,
         type: 3}
