@@ -14,12 +14,15 @@ public class Move : MonoBehaviour
     bool grounflag = false;
     Rigidbody2D rbody;
     public string sceneName;
+    public AudioClip sound1;
+    AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
     {
         rbody = GetComponent<Rigidbody2D>();
         rbody.constraints = RigidbodyConstraints2D.FreezeRotation;
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -38,7 +41,7 @@ public class Move : MonoBehaviour
         }
         if (Input.GetKeyDown("space") && grounflag)
         {
-            if(pushflag == false)
+            if (pushflag == false)
             {
                 jumpflag = true;
                 pushflag = true;
@@ -49,8 +52,8 @@ public class Move : MonoBehaviour
         {
             pushflag = false;
         }
-}
-     void FixedUpdate()
+    }
+    void FixedUpdate()
     {
         rbody.velocity = new Vector2(vx, rbody.velocity.y);
         if (jumpflag)
@@ -71,10 +74,11 @@ public class Move : MonoBehaviour
     }
 
 
-     void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Enemy")
         {
+            audioSource.PlayOneShot(sound1);
             SceneManager.LoadScene(sceneName);
         }
     }
