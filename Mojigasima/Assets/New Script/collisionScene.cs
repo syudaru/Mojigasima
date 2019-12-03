@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿/*using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -17,3 +17,4 @@ public class collisionScene : MonoBehaviour
         SceneManager.LoadScene(sceneName);
     }
 }
+*/

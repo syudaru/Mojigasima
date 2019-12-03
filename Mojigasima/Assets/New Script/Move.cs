@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Move : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class Move : MonoBehaviour
     bool jumpflag = false;
     bool grounflag = false;
     Rigidbody2D rbody;
+    public string sceneName;
 
     // Start is called before the first frame update
     void Start()
@@ -61,9 +63,20 @@ public class Move : MonoBehaviour
     void OnTriggerStay2D(Collider2D collision)
     {
         grounflag = true;
+
     }
     void OnTriggerExit2D(Collider2D collision)
     {
         grounflag = false;
     }
+
+
+     void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
+        {
+            SceneManager.LoadScene(sceneName);
+        }
+    }
 }
+
