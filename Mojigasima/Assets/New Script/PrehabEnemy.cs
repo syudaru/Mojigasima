@@ -10,6 +10,9 @@ public class PrehabEnemy : MonoBehaviour
     public float time; // 経過時間(秒)
     public float speed = 2;
     private bool isInsideCamera;
+    private Animator anim = null;
+    private bool isDead = false;
+    int hp = 1;
 
     // 毎フレーム呼び出されるメソッド
 
@@ -30,6 +33,12 @@ public class PrehabEnemy : MonoBehaviour
                 obj.transform.position = transform.position;
                 obj.name = "EnemyBullet";
             }
+        }
+
+        if (hp == 0)
+        {
+            anim.Play("dead");
+            isDead = true;
         }
     }
     void OnBecameInvisible()
