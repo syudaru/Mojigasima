@@ -23,7 +23,7 @@ public class KENDAMAAnimation : MonoBehaviour
         if (displayItemManeger.KENDAMA)
         {
             
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.UpArrow))
             {
                 animator.SetBool("KENDAMAAttack", true);
                 Debug.Log("KENDAMAATTACK");
@@ -31,7 +31,7 @@ public class KENDAMAAnimation : MonoBehaviour
                 KENDAMAManeger.attack1 = true;
                 KENDAMAManeger.attack2 = false;
             }
-            if (count >= 200)
+            if (count >= 100)
             {
                 animator.SetBool("KENDAMAAttack", false);
                 KENDAMAManeger.attack1 = false;
