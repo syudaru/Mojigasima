@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class WaveManeger : MonoBehaviour
 {
@@ -39,8 +40,9 @@ public class WaveManeger : MonoBehaviour
             // 現在の敵機のインデックスに加算し、配列に格納された数以上になれば
             if (waves.Length <= ++currentWave)
             {
-                // 現在の敵機のインデックスを 0 にする
-                currentWave = 0;
+                Debug.Log("Gameclear");
+                SceneManager.LoadScene("scene game clear");
+                //currentWave = 0;
             }
         }
     }
