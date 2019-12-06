@@ -453,11 +453,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 882047761}
     m_Modifications:
-    - target: {fileID: 3173765755255660426, guid: 99ab50bf84a09c7439b15955aa77c248,
-        type: 3}
-      propertyPath: m_Name
-      value: 'backGround '
-      objectReference: {fileID: 0}
     - target: {fileID: 1608416708135758428, guid: 99ab50bf84a09c7439b15955aa77c248,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -532,6 +527,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SortingLayer
       value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3173765755255660426, guid: 99ab50bf84a09c7439b15955aa77c248,
+        type: 3}
+      propertyPath: m_Name
+      value: 'backGround '
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99ab50bf84a09c7439b15955aa77c248, type: 3}
@@ -836,11 +836,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 882047761}
     m_Modifications:
-    - target: {fileID: 3173765755255660426, guid: 99ab50bf84a09c7439b15955aa77c248,
-        type: 3}
-      propertyPath: m_Name
-      value: backGround (3)
-      objectReference: {fileID: 0}
     - target: {fileID: 1608416708135758428, guid: 99ab50bf84a09c7439b15955aa77c248,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -916,6 +911,11 @@ PrefabInstance:
       propertyPath: m_SortingLayer
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 3173765755255660426, guid: 99ab50bf84a09c7439b15955aa77c248,
+        type: 3}
+      propertyPath: m_Name
+      value: backGround (3)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99ab50bf84a09c7439b15955aa77c248, type: 3}
 --- !u!4 &363506817 stripped
@@ -936,7 +936,7 @@ GameObject:
   - component: {fileID: 402074538}
   - component: {fileID: 402074537}
   - component: {fileID: 402074539}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: "\u3060\u3000"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1120,7 +1120,7 @@ GameObject:
   m_Component:
   - component: {fileID: 455665798}
   - component: {fileID: 455665799}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: ItemManegr
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1253,7 +1253,7 @@ PrefabInstance:
     - target: {fileID: 818588642280855366, guid: e9b30997758c37b4b951c6af9d57df65,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 818588642280855369, guid: e9b30997758c37b4b951c6af9d57df65,
         type: 3}
@@ -1324,7 +1324,7 @@ GameObject:
   - component: {fileID: 555133753}
   - component: {fileID: 555133752}
   - component: {fileID: 555133754}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: "\u30A2\u30A4\u30C6\u30E0\u3000\u3051"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1570,11 +1570,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 882047761}
     m_Modifications:
-    - target: {fileID: 3173765755255660426, guid: 99ab50bf84a09c7439b15955aa77c248,
-        type: 3}
-      propertyPath: m_Name
-      value: backGround (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 1608416708135758428, guid: 99ab50bf84a09c7439b15955aa77c248,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1650,6 +1645,11 @@ PrefabInstance:
       propertyPath: m_SortingLayer
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 3173765755255660426, guid: 99ab50bf84a09c7439b15955aa77c248,
+        type: 3}
+      propertyPath: m_Name
+      value: backGround (2)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99ab50bf84a09c7439b15955aa77c248, type: 3}
 --- !u!4 &559677554 stripped
@@ -1670,9 +1670,9 @@ GameObject:
   - component: {fileID: 571534230}
   - component: {fileID: 571534229}
   - component: {fileID: 571534228}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: KENDAMAAttack
-  m_TagString: Untagged
+  m_TagString: Attack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1704,7 +1704,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -1.5, y: 0}
+  m_Offset: {x: -2.4393508, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
     pivot: {x: 0.5, y: 0.5}
@@ -1715,7 +1715,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.3976142, y: 0.64249665}
+  m_Size: {x: 5.276316, y: 0.64249665}
   m_EdgeRadius: 0
 --- !u!212 &571534230
 SpriteRenderer:
@@ -1872,6 +1872,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6703485171231041833, guid: 36ceb98b1bcac384286c5929901977a6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 6703485171231041831, guid: 36ceb98b1bcac384286c5929901977a6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1959,11 +1964,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 882047761}
     m_Modifications:
-    - target: {fileID: 3173765755255660426, guid: 99ab50bf84a09c7439b15955aa77c248,
-        type: 3}
-      propertyPath: m_Name
-      value: backGround (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 1608416708135758428, guid: 99ab50bf84a09c7439b15955aa77c248,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2038,6 +2038,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SortingLayer
       value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3173765755255660426, guid: 99ab50bf84a09c7439b15955aa77c248,
+        type: 3}
+      propertyPath: m_Name
+      value: backGround (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99ab50bf84a09c7439b15955aa77c248, type: 3}
@@ -2255,7 +2260,7 @@ GameObject:
   - component: {fileID: 1013569973}
   - component: {fileID: 1013569972}
   - component: {fileID: 1013569974}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: "\u3093\u3000\u25CF"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2361,11 +2366,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 882047761}
     m_Modifications:
-    - target: {fileID: 3173765755255660426, guid: 99ab50bf84a09c7439b15955aa77c248,
-        type: 3}
-      propertyPath: m_Name
-      value: backGround (5)
-      objectReference: {fileID: 0}
     - target: {fileID: 1608416708135758428, guid: 99ab50bf84a09c7439b15955aa77c248,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2440,6 +2440,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SortingLayer
       value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3173765755255660426, guid: 99ab50bf84a09c7439b15955aa77c248,
+        type: 3}
+      propertyPath: m_Name
+      value: backGround (5)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99ab50bf84a09c7439b15955aa77c248, type: 3}
@@ -2629,11 +2634,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 882047761}
     m_Modifications:
-    - target: {fileID: 3173765755255660426, guid: 99ab50bf84a09c7439b15955aa77c248,
-        type: 3}
-      propertyPath: m_Name
-      value: backGround (4)
-      objectReference: {fileID: 0}
     - target: {fileID: 1608416708135758428, guid: 99ab50bf84a09c7439b15955aa77c248,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2709,6 +2709,11 @@ PrefabInstance:
       propertyPath: m_SortingLayer
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 3173765755255660426, guid: 99ab50bf84a09c7439b15955aa77c248,
+        type: 3}
+      propertyPath: m_Name
+      value: backGround (4)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99ab50bf84a09c7439b15955aa77c248, type: 3}
 --- !u!4 &1179893946 stripped
@@ -2735,8 +2740,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 537cb83535256714388726c195a1debd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
-  jump: 1
+  speed: 0
+  jump: 0
   sound2: {fileID: 8300000, guid: b06c1f2eaa427da47a5cd8280552e146, type: 3}
 --- !u!50 &1199658839
 Rigidbody2D:
@@ -3040,9 +3045,9 @@ GameObject:
   - component: {fileID: 1300993578}
   - component: {fileID: 1300993577}
   - component: {fileID: 1300993576}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PlayerAttack
-  m_TagString: Untagged
+  m_TagString: Attack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3163,7 +3168,7 @@ GameObject:
   - component: {fileID: 1349518527}
   - component: {fileID: 1349518530}
   - component: {fileID: 1349518531}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: "\u3072\u3050\u307E (3)"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3305,7 +3310,7 @@ GameObject:
   - component: {fileID: 1411646092}
   - component: {fileID: 1411646091}
   - component: {fileID: 1411646093}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ma
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3416,7 +3421,7 @@ GameObject:
   - component: {fileID: 1426244531}
   - component: {fileID: 1426244530}
   - component: {fileID: 1426244529}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: KENDAMA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3530,7 +3535,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1499926161}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: FieldItem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3855,6 +3860,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7364636312581240167, guid: abfaa554ac3fdfe4aa2a035c2e21c27f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7364636312581240161, guid: abfaa554ac3fdfe4aa2a035c2e21c27f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3940,6 +3950,11 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5314110295033288935, guid: abfaa554ac3fdfe4aa2a035c2e21c27f,
+        type: 3}
+      propertyPath: enemy
+      value: 
+      objectReference: {fileID: 1199658834}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: abfaa554ac3fdfe4aa2a035c2e21c27f, type: 3}
 --- !u!1 &2015429666
@@ -4278,6 +4293,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boss ma
       objectReference: {fileID: 0}
+    - target: {fileID: 2189065000281761396, guid: dc3b780d4e5a00d4e9f778d09294fb35,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2189065000281761384, guid: dc3b780d4e5a00d4e9f778d09294fb35,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4420,6 +4440,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Boos Tail
+      objectReference: {fileID: 0}
+    - target: {fileID: 5430535254091100215, guid: a8a630f616db92e4395d36178edf377a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5430535254091100214, guid: a8a630f616db92e4395d36178edf377a,
         type: 3}
