@@ -147,6 +147,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   jump: 10
+  sceneName: 
+  sound1: {fileID: 0}
 --- !u!114 &6703485171231041824
 MonoBehaviour:
   m_ObjectHideFlags: 0
