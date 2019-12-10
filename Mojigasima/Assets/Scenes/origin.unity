@@ -1451,7 +1451,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 555200173}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ff5400feac09ca499a393d0f956befe, type: 3}
+  m_Script: {fileID: 0}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!82 &555200175
@@ -1810,12 +1810,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1514000638}
-  m_RootOrder: 1
+  m_Father: {fileID: 2054174739}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -234.00003, y: 0}
+  m_AnchoredPosition: {x: -185.50003, y: 197}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &649270864
@@ -1877,6 +1877,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6703485171231041833, guid: 36ceb98b1bcac384286c5929901977a6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 6703485171231041831, guid: 36ceb98b1bcac384286c5929901977a6,
         type: 3}
@@ -2105,8 +2110,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: 8dd07ac184fb79048bf18ef07e121a25, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -2233,7 +2238,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.047263652, y: -0.35720795}
@@ -3589,9 +3594,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 2098838542}
-  - {fileID: 649270863}
+  m_Children: []
   m_Father: {fileID: 2054174739}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3812,9 +3815,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09438dce0d2bdd34a9f94704405c3b89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imageObj_Health_1: {fileID: 1514000637}
+  imageObj_Health_1: {fileID: 649270862}
   imageObj_Health_2: {fileID: 2098838541}
-  imageObj_Health_3: {fileID: 649270862}
+  imageObj_Health_3: {fileID: 1514000637}
 --- !u!114 &1731131826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4199,6 +4202,8 @@ RectTransform:
   - {fileID: 175460047}
   - {fileID: 455665798}
   - {fileID: 1514000638}
+  - {fileID: 2098838542}
+  - {fileID: 649270863}
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4236,12 +4241,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1514000638}
-  m_RootOrder: 0
+  m_Father: {fileID: 2054174739}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -115.00003, y: 0}
+  m_AnchoredPosition: {x: -66.50003, y: 197}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2098838543

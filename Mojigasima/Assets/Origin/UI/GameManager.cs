@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -26,4 +27,9 @@ public class GameManager : MonoBehaviour
             Destroy(imageObj_Health_1); // 1つめのアイコンを消去
         }
     }
+
+	public void Awake()
+	{
+		DontDestroyOnLoad(gameObject);
+	}
 }

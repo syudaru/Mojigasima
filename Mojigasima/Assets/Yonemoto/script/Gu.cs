@@ -18,6 +18,7 @@ public class Gu : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
+		//5秒ごとに弾を発射する
 		intervalTime -= Time.deltaTime;
 		if (intervalTime < 0.0f)
 		{
