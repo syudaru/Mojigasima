@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Yonemoto/scene/Timer Scene.unity
+    guid: 47a78f352986f3b41a77077007f6581d
   m_configObjects: {}

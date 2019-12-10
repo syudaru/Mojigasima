@@ -14,9 +14,11 @@ public class GuAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+		//Hierarchy WindowからPlayerTagの付いたアクティブ状態のオブジェクトを探して二点間の距離を取得して追う
 		GameObject target = GameObject.FindWithTag("Player");
 		float following = Time.deltaTime * speed;
 		transform.position = Vector3.MoveTowards(transform.position, target.transform.position, following);
+		//3秒後にオブジェクトが消える
 		Destroy(this.gameObject, 3.0f);
 	}
 
