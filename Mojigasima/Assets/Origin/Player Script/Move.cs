@@ -99,19 +99,6 @@ public class Move : MonoBehaviour
 			audioSource.PlayOneShot(sound1);
 		}
 
-		if (collision.gameObject.tag == "FireTail")
-		{
-			hp--;
-			GameManager.SetPlayerHealthUI(hp);
-			audioSource.PlayOneShot(sound1);
-		}
-		if (collision.gameObject.tag == "FireTail")
-		{
-			hp--;
-			GameManager.SetPlayerHealthUI(hp);
-			audioSource.PlayOneShot(sound1);
-		}
-
 		//ま、の攻撃を受けたらHpを1マイナス
 		if (collision.gameObject.tag == "MaAttack")
 		{
