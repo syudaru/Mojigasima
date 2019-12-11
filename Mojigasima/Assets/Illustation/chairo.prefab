@@ -8,9 +8,16 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD:Mojigasima/Assets/Illustation/chairo.prefab
   - component: {fileID: 8823781198648215598}
   - component: {fileID: 243958418273500450}
   - component: {fileID: 6193943855753322102}
+=======
+  - component: {fileID: 7364636312581240161}
+  - component: {fileID: 7364636312581240160}
+  - component: {fileID: 7364636312581240162}
+  - component: {fileID: 5314110295033288935}
+>>>>>>> develop:Mojigasima/Assets/Origin/Prehab Enemy/nokonokoRed.prefab
   m_Layer: 0
   m_Name: chairo
   m_TagString: Untagged
@@ -107,3 +114,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3, y: 3}
   m_EdgeRadius: 0
+--- !u!114 &5314110295033288935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7364636312581240167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58d2df9a177f00140956b8a6763f0f48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 0}

@@ -7,7 +7,11 @@ TagManager:
   - Enemy
   - field KE
   - Attack
+<<<<<<< HEAD
   - Ground
+=======
+  - MaAttack
+>>>>>>> develop
   layers:
   - Default
   - TransparentFX
@@ -18,9 +22,9 @@ TagManager:
   - 
   - 
   - Enemy
-  - 
-  - 
-  - 
+  - Player
+  - Attack
+  - Item
   - 
   - 
   - 
