@@ -5,39 +5,36 @@ using UnityEngine;
 public class jumpEnemy : MonoBehaviour
 {
     public float speed = 1;
-    public float jump = 5;
-    Rigidbody2D rbody;
+    public float jump = 1;
     private SpriteRenderer sr = null;
-    float time = 0;
     AudioSource audioSource;
-    public AudioClip sound2;
-    Rigidbody2D rb2d;
-
-    // Start is called before the first frame update
+    public AudioClip sound1;
+    private Rigidbody rigid;
+    private Vector3 defaultPos;
+    private Rigidbody Shika;
 
     void Start()
     {
-        rb2d = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
         audioSource = GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (sr.isVisible)
         {
-            this.transform.Translate(speed / 50, 0, 0);
-            this.transform.Translate(0, jump / 50, 0);
+            this.transform.Translate(speed / 100, 0, 0);
+            this.transform.Translate(0, jump/100, 0);
         }
     }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        
+
         if (collision.gameObject.tag == "Attack")
         {
-            audioSource.PlayOneShot(sound2);
+            audioSource.PlayOneShot(sound1);
         }
     }
 }
+

@@ -14,12 +14,15 @@ public class Move : MonoBehaviour
     bool pushflag = false;
     bool jumpflag = false;
     bool grounflag = false;
+    public bool on_damage = false;
     Rigidbody2D rbody;
     private float totalTime;
     public string sceneName;
     public AudioClip sound1;
     public GameManager GameManager;
     AudioSource audioSource;
+    private SpriteRenderer renderer;
+
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +31,7 @@ public class Move : MonoBehaviour
         rbody = GetComponent<Rigidbody2D>();
         rbody.constraints = RigidbodyConstraints2D.FreezeRotation;
         audioSource = GetComponent<AudioSource>();
+        renderer = gameObject.GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -52,10 +56,15 @@ public class Move : MonoBehaviour
                 pushflag = true;
             }
         }
-
         else
         {
             pushflag = false;
+        }
+
+        if (on_damage)
+        {
+            float level = Mathf.Abs(Mathf.Sin(Time.time * 10));
+            renderer.color = new Color(1f, 1f, 1f, level);
         }
     }
     void FixedUpdate()
@@ -81,25 +90,12 @@ public class Move : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Enemy")
+        if (!on_damage && collision.gameObject.tag == "Enemy")
         {
             hp--;
             GameManager.SetPlayerHealthUI(hp);
             audioSource.PlayOneShot(sound1);
-        }
-
-        if (collision.gameObject.tag == "FireTail")
-        {
-            hp--;
-            GameManager.SetPlayerHealthUI(hp);
-            audioSource.PlayOneShot(sound1);
-        }
-
-        if (collision.gameObject.tag == "FireTail")
-        {
-            hp--;
-            GameManager.SetPlayerHealthUI(hp);
-            audioSource.PlayOneShot(sound1);
+            OnDamageEffect();
         }
 
         if (collision.gameObject.tag == "Gensoku")
@@ -115,12 +111,43 @@ public class Move : MonoBehaviour
                 jump = 5;
             }
         }
-
         if (hp <= 0)
-        {
-            Destroy(gameObject);
+        { 
             SceneManager.LoadScene(sceneName);
         }
     }
+    void OnDamageEffect()
+    {
+        // ダメージフラグON
+        on_damage = true;
+
+        // プレイヤーの位置を後ろに飛ばす
+        float s = 100f * Time.deltaTime;
+        transform.Translate(Vector3.up * s);
+
+        // プレイヤーのlocalScaleでどちらを向いているのかを判定
+        if (transform.localScale.x >= 0)
+        {
+            transform.Translate(Vector3.left * s);
+        }
+        else
+        {
+            transform.Translate(Vector3.right * s);
+        }
+
+        // コルーチン開始
+        StartCoroutine("WaitForIt");
+    }
+
+    IEnumerator WaitForIt()
+    {
+        // 1秒間処理を止める
+        yield return new WaitForSeconds(1);
+
+        // １秒後ダメージフラグをfalseにして点滅を戻す
+        on_damage = false;
+        renderer.color = new Color(1f, 1f, 1f, 1f);
+    }
 }
+
 

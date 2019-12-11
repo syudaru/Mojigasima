@@ -7,6 +7,7 @@ TagManager:
   - Enemy
   - field KE
   - Attack
+  - Ground
   layers:
   - Default
   - TransparentFX
@@ -43,6 +44,9 @@ TagManager:
   m_SortingLayers:
   - name: BackGround
     uniqueID: 2047744529
+    locked: 0
+  - name: Taki
+    uniqueID: 3230674539
     locked: 0
   - name: Default
     uniqueID: 0

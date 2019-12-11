@@ -5,19 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class tagScene : MonoBehaviour
 {
-    public string sceneGoal;
-    public string sceneEnemy;
+    public string title;
+
     // Start is called before the first frame update
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == ("Goal"))
+        if (collision.gameObject.tag == ("Player"))
         {
-            SceneManager.LoadScene(sceneGoal);
+            SceneManager.LoadScene(title);
         }
-        if (collision.gameObject.tag == ("Enemy"))
-        {
-            SceneManager.LoadScene(sceneEnemy);
-        }
-    }
 
+    }
 }
+
+
