@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class en : MonoBehaviour
 {
-    private int speed;                //オブジェクトのスピード
-    private int radius;               //円を描く半径
+    public int speed;                //オブジェクトのスピード
+    public int radius;               //円を描く半径
     private Vector3 defPosition;      //defPositionをVector3で定義する。
     float x;
     float y;
@@ -13,8 +13,7 @@ public class en : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        speed = 1;
-        radius = 2;
+       
 
         defPosition = transform.position;    //defPositionを自分のいる位置に設定する。
     }
