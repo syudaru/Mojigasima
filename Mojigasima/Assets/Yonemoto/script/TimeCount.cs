@@ -7,7 +7,7 @@ public class TimeCount : MonoBehaviour
 {
 	public static TimeCount singleton;
 	//　トータル制限時間
-	public static float totalTime;
+	public float totalTime;
 	//　制限時間（分）
 	[SerializeField]
 	private static float minute = 1f;
@@ -16,7 +16,7 @@ public class TimeCount : MonoBehaviour
 	private static float seconds = 0f;
 	//　前回Update時の秒数
 	private float oldSeconds;
-	private static Text timerText;
+	private Text timerText;
 	public string scenename;
 
 	void Start()
@@ -67,10 +67,5 @@ public class TimeCount : MonoBehaviour
 			SceneManager.LoadScene("scene game over");
 			//SceneManager.LoadScene(scenename);
 		}
-	}
-
-	public void GetTimeCount()
-	{
-		SceneManager.LoadScene("Timer Scene");
 	}
 }

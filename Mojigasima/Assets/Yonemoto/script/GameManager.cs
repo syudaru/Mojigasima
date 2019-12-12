@@ -9,9 +9,14 @@ public class GameManager : MonoBehaviour
     public GameObject imageObj_Health_2; // プレイヤー残り体力2を示すUI
     public GameObject imageObj_Health_3; // プレイヤー残り体力3を示すUI
 
-    // プレイヤーの残り体力をUIに適用(PlayerControllerから呼び出される)
-    // 引数health : 残り体力
-    public void SetPlayerHealthUI(int health)
+	void Start()
+	{
+		
+	}
+
+	// プレイヤーの残り体力をUIに適用(PlayerControllerから呼び出される)
+	// 引数health : 残り体力
+	public void SetPlayerHealthUI(int health)
     {
         // 残り体力によって非表示にすべき体力アイコンを消去する
         if (health == 2)
@@ -28,8 +33,5 @@ public class GameManager : MonoBehaviour
         }
     }
 
-	public void Awake()
-	{
-		DontDestroyOnLoad(gameObject);
-	}
+
 }
