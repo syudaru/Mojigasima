@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class Move : MonoBehaviour
 {
-<<<<<<< HEAD
     public float speed = 3;
     public float jump = 5;
     public int hp = 3;
@@ -106,14 +105,14 @@ public class Move : MonoBehaviour
             jump = 2;
             audioSource.PlayOneShot(sound1);
 
-            if(totalTime == 5)
+            if (totalTime == 5)
             {
                 speed = 5;
                 jump = 5;
             }
         }
         if (hp <= 0)
-        { 
+        {
             SceneManager.LoadScene(sceneName);
         }
     }
@@ -149,7 +148,8 @@ public class Move : MonoBehaviour
         on_damage = false;
         renderer.color = new Color(1f, 1f, 1f, 1f);
     }
-=======
+}
+/*
 	public static Move singleton;
 	public float speed = 3;
 	public float jump = 5;
@@ -279,7 +279,6 @@ public class Move : MonoBehaviour
 		//}
 
 	}
->>>>>>> develop
 }
-
+*/
 
