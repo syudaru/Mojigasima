@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6317602595161516736}
   - component: {fileID: 6317602595161516737}
   - component: {fileID: 6317602595161516743}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 'Shika '
   m_TagString: Enemy
   m_Icon: {fileID: 0}

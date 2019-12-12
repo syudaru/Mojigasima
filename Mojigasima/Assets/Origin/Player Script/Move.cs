@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class Move : MonoBehaviour
 {
-<<<<<<< HEAD
+
     public float speed = 3;
     public float jump = 5;
     public int hp = 3;
@@ -70,7 +70,7 @@ public class Move : MonoBehaviour
     }
     void FixedUpdate()
     {
-        rbody.velocity = new Vector2(vx, rbody.velocity.y);
+
         if (jumpflag)
         {
             jumpflag = false;
@@ -106,14 +106,14 @@ public class Move : MonoBehaviour
             jump = 2;
             audioSource.PlayOneShot(sound1);
 
-            if(totalTime == 5)
+            if (totalTime == 5)
             {
                 speed = 5;
                 jump = 5;
             }
         }
         if (hp <= 0)
-        { 
+        {
             SceneManager.LoadScene(sceneName);
         }
     }
@@ -149,150 +149,5 @@ public class Move : MonoBehaviour
         on_damage = false;
         renderer.color = new Color(1f, 1f, 1f, 1f);
     }
-=======
-	public static Move singleton;
-	public float speed = 3;
-	public float jump = 5;
-	public static int hp = 3;
-	float vx = 0;
-	bool leftflag = false;
-	bool pushflag = false;
-	bool jumpflag = false;
-	bool grounflag = false;
-	Rigidbody2D rbody;
-	private float totalTime;
-	public string sceneName;
-	public AudioClip sound1;
-	public GameManager GameManager;
-	AudioSource audioSource;
-
-	// Start is called before the first frame update
-	void Start()
-	{
-		GameManager.SetPlayerHealthUI(hp);
-		rbody = GetComponent<Rigidbody2D>();
-		rbody.constraints = RigidbodyConstraints2D.FreezeRotation;
-		audioSource = GetComponent<AudioSource>();
-		// スクリプトが設定されていなければゲームオブジェクトを残しつつスクリプトを設定
-		if (singleton == null)
-		{
-			DontDestroyOnLoad(gameObject);
-		}
-		// 既にTimeCountスクリプトがあればこのシーンの同じゲームオブジェクトを削除
-		else
-		{
-			Destroy(gameObject);
-		}
-	}
-
-	// Update is called once per frame
-	void Update()
-	{
-		vx = 0;
-		if (Input.GetKey("right"))
-		{
-			vx = speed;
-			leftflag = false;
-		}
-		if (Input.GetKey("left"))
-		{
-			vx = -speed;
-			leftflag = true;
-		}
-		if (Input.GetKeyDown("space") && grounflag)
-		{
-			if (pushflag == false)
-			{
-				jumpflag = true;
-				pushflag = true;
-			}
-		}
-
-		else
-		{
-			pushflag = false;
-		}
-	}
-	void FixedUpdate()
-	{
-		rbody.velocity = new Vector2(vx, rbody.velocity.y);
-		if (jumpflag)
-		{
-			jumpflag = false;
-			rbody.AddForce(new Vector2(0, jump), ForceMode2D.Impulse);
-		}
-
-	}
-	void OnTriggerStay2D(Collider2D collision)
-	{
-		grounflag = true;
-
-	}
-	void OnTriggerExit2D(Collider2D collision)
-	{
-		grounflag = false;
-	}
-
-
-	void OnTriggerEnter2D(Collider2D collision)
-	{
-		if (collision.gameObject.tag == "Enemy")
-		{
-			hp--;
-			GameManager.SetPlayerHealthUI(hp);
-			audioSource.PlayOneShot(sound1);
-		}
-
-		if (collision.gameObject.tag == "FireTail")
-		{
-			hp--;
-			GameManager.SetPlayerHealthUI(hp);
-			audioSource.PlayOneShot(sound1);
-		}
-		if (collision.gameObject.tag == "FireTail")
-		{
-			hp--;
-			GameManager.SetPlayerHealthUI(hp);
-			audioSource.PlayOneShot(sound1);
-		}
-
-		//ま、の攻撃を受けたらHpを1マイナス
-		if (collision.gameObject.tag == "MaAttack")
-		{
-			hp--;
-			GameManager.SetPlayerHealthUI(hp);
-			audioSource.PlayOneShot(sound1);
-		}
-
-		if (collision.gameObject.tag == "Gensoku")
-		{
-			totalTime += Time.deltaTime;
-			speed = 1;
-			jump = 2;
-			audioSource.PlayOneShot(sound1);
-
-			if (totalTime == 5)
-			{
-				speed = 5;
-				jump = 5;
-			}
-		}
-
-		if (hp == 0)
-		{
-			Destroy(gameObject);
-			SceneManager.LoadScene("scene game over");
-		}
-
-		//ちょっとわからない
-		//if (hp <= 0)
-		//{
-		//    Destroy(gameObject);
-		//    SceneManager.LoadScene(sceneName);
-		//}
-
-	}
->>>>>>> develop
 }
-
 
