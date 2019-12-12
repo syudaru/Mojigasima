@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Enemydamege : MonoBehaviour
 {
+    public GameObject howToRead;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,14 +14,16 @@ public class Enemydamege : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Attack")
         {
-            Destroy(gameObject);
+            howToReadScript.time = 0;
+            howToRead.SetActive(true);
+            gameObject.SetActive(false);
         }
     }
 }
