@@ -2838,11 +2838,11 @@ GameObject:
   - component: {fileID: 571534228}
   m_Layer: 0
   m_Name: KENDAMAAttack
-  m_TagString: Untagged
+  m_TagString: Attack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &571534228
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5545,13 +5545,13 @@ GameObject:
   - component: {fileID: 1300993578}
   - component: {fileID: 1300993577}
   - component: {fileID: 1300993576}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: PlayerAttack
-  m_TagString: Untagged
+  m_TagString: Attack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!61 &1300993576
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5562,10 +5562,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.2814033, y: -0.36669347}
+  m_Offset: {x: -1.4126303, y: 0.35603428}
   m_SpriteTilingProperty:
     border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
     pivot: {x: 0.5, y: 0.5}
@@ -5576,7 +5576,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.72782, y: 0.73348695}
+  m_Size: {x: 4.990274, y: 2.1789424}
   m_EdgeRadius: 0
 --- !u!114 &1300993577
 MonoBehaviour:
@@ -7941,6 +7941,24 @@ Transform:
   m_Father: {fileID: 882047761}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1994892922 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4320211230399880441, guid: 120d66d06a7cb0247a98b65f8300aab8,
+    type: 3}
+  m_PrefabInstance: {fileID: 4320211229667906235}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1994892927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1994892922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58d2df9a177f00140956b8a6763f0f48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2007288056
 GameObject:
   m_ObjectHideFlags: 0
@@ -8438,12 +8456,12 @@ PrefabInstance:
     - target: {fileID: 9113597147990327413, guid: 5cce6717f831ea643bafa975d4a79508,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.8
+      value: 3.69
       objectReference: {fileID: 0}
     - target: {fileID: 9113597147990327413, guid: 5cce6717f831ea643bafa975d4a79508,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.23
+      value: -1.66
       objectReference: {fileID: 0}
     - target: {fileID: 9113597147990327413, guid: 5cce6717f831ea643bafa975d4a79508,
         type: 3}
@@ -8489,6 +8507,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113597147990327413, guid: 5cce6717f831ea643bafa975d4a79508,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113597147990327413, guid: 5cce6717f831ea643bafa975d4a79508,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9113597147990327416, guid: 5cce6717f831ea643bafa975d4a79508,
         type: 3}
@@ -8710,6 +8738,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Nezumi
+      objectReference: {fileID: 0}
+    - target: {fileID: 4320211230399880441, guid: 120d66d06a7cb0247a98b65f8300aab8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4320211230399880440, guid: 120d66d06a7cb0247a98b65f8300aab8,
         type: 3}
