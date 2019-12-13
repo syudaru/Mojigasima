@@ -7,7 +7,7 @@ public class TimeCount : MonoBehaviour
 {
 	public static TimeCount singleton;
 	//　トータル制限時間
-	public static float totalTime;
+	public float totalTime;
 	//　制限時間（分）
 	[SerializeField]
 	private static float minute = 1f;
@@ -16,7 +16,7 @@ public class TimeCount : MonoBehaviour
 	private static float seconds = 0f;
 	//　前回Update時の秒数
 	private float oldSeconds;
-	private static Text timerText;
+	private Text timerText;
 	public string scenename;
 
 	void Start()
@@ -24,16 +24,6 @@ public class TimeCount : MonoBehaviour
 		totalTime = minute * 60 + seconds;
 		oldSeconds = 0f;
 		timerText = GetComponentInChildren<Text>();
-		// スクリプトが設定されていなければゲームオブジェクトを残しつつスクリプトを設定
-		if (singleton == null)
-		{
-			DontDestroyOnLoad(timerText);
-		}
-		// 既にTimeCountスクリプトがあればこのシーンの同じゲームオブジェクトを削除
-		else
-		{
-			Destroy(timerText);
-		}
 	}
 
 	void Update()
@@ -67,10 +57,5 @@ public class TimeCount : MonoBehaviour
 			SceneManager.LoadScene("scene game over");
 			//SceneManager.LoadScene(scenename);
 		}
-	}
-
-	public void GetTimeCount()
-	{
-		SceneManager.LoadScene("Timer Scene");
 	}
 }

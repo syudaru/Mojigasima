@@ -1,5 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+<<<<<<<< HEAD:Mojigasima/Assets/Yonemoto.meta
+guid: dd42b0f74c06b9a45ac288bf343bb7c8
+========
+guid: 31dbedd735d60294b860a9574c456bbe
+>>>>>>>> develop:Mojigasima/Assets/Origin/Yonemoto.meta
+=======
 guid: e698ad14f13208f4da73e5eaa30ad006
+>>>>>>> develop
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

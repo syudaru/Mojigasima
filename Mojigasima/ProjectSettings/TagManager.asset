@@ -5,9 +5,15 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+<<<<<<< HEAD
+  - Ground
+  - MaAttack
+  - BossLoad
+=======
   - MaAttack
   - Ground
   - Attack
+>>>>>>> develop
   layers:
   - Default
   - TransparentFX

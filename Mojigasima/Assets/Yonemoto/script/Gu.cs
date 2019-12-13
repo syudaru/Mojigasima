@@ -5,7 +5,6 @@ using UnityEngine;
 public class Gu : MonoBehaviour
 {
 	public float speed = 1.0f;
-	public int hp = 3;
 	public GameObject bulletObject = null;
 	public float bulletInterval = 5.0f;
 	public float intervalTime = 0;
@@ -25,18 +24,6 @@ public class Gu : MonoBehaviour
 			Vector3 bulletPosition = transform.position + new Vector3(1.0f, 0, 0);
 			Instantiate(bulletObject, bulletPosition, Quaternion.identity);
 			intervalTime = bulletInterval;
-		}
-	}
-
-	private void OnTriggerEnter2D(Collider2D collision)
-	{
-		if (collision.tag == "PlayerAttack")
-		{
-			hp -= 1;
-			if (hp <= 0)
-			{
-				Destroy(gameObject);
-			}
 		}
 	}
 }
