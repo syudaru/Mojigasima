@@ -5,9 +5,15 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+<<<<<<< HEAD
   - Ground
   - MaAttack
   - BossLoad
+=======
+  - MaAttack
+  - Ground
+  - Attack
+>>>>>>> develop
   layers:
   - Default
   - TransparentFX
@@ -42,6 +48,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: BackGround
+    uniqueID: 1000681125
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
