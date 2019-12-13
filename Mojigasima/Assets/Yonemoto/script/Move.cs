@@ -38,7 +38,7 @@ public class Move : MonoBehaviour
 		{
 			DontDestroyOnLoad(gameObject);
 		}
-		// 既にTimeCountスクリプトがあればこのシーンの同じゲームオブジェクトを削除
+		// 既にMoveスクリプトがあればこのシーンの同じゲームオブジェクトを削除
 		else
 		{
 			Destroy(gameObject);
@@ -136,11 +136,15 @@ public class Move : MonoBehaviour
 		{
 			SceneManager.LoadScene("bossStage");
 		}
+		//if (hp == 0)
+		//{
+		//	Destroy(gameObject);
+		//}
 
-		if (hp <= 0)
-		{
-			SceneManager.LoadScene(sceneName);
-		}
+		//if (hp <= 0)
+		//{
+		//	SceneManager.LoadScene(sceneName);
+		//}
 	}
 
 	void OnDamageEffect()

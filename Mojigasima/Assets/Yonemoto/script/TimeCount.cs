@@ -24,16 +24,6 @@ public class TimeCount : MonoBehaviour
 		totalTime = minute * 60 + seconds;
 		oldSeconds = 0f;
 		timerText = GetComponentInChildren<Text>();
-		// スクリプトが設定されていなければゲームオブジェクトを残しつつスクリプトを設定
-		if (singleton == null)
-		{
-			DontDestroyOnLoad(timerText);
-		}
-		// 既にTimeCountスクリプトがあればこのシーンの同じゲームオブジェクトを削除
-		else
-		{
-			Destroy(timerText);
-		}
 	}
 
 	void Update()

@@ -5,20 +5,30 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject imageObj_Health_1; // プレイヤー残り体力1を示すUI
+	public static GameManager singleton;
+	public GameObject imageObj_Health_1; // プレイヤー残り体力1を示すUI
     public GameObject imageObj_Health_2; // プレイヤー残り体力2を示すUI
     public GameObject imageObj_Health_3; // プレイヤー残り体力3を示すUI
 
 	void Start()
 	{
-		
+		// スクリプトが設定されていなければゲームオブジェクトを残しつつスクリプトを設定
+		if (singleton == null)
+		{
+			DontDestroyOnLoad(gameObject);
+		}
+		// 既にスクリプトがあればこのシーンの同じゲームオブジェクトを削除
+		else
+		{
+			Destroy(gameObject);
+		}
 	}
 
 	// プレイヤーの残り体力をUIに適用(PlayerControllerから呼び出される)
 	// 引数health : 残り体力
 	public void SetPlayerHealthUI(int health)
     {
-        // 残り体力によって非表示にすべき体力アイコンを消去する
+		// 残り体力によって非表示にすべき体力アイコンを消去する
         if (health == 2)
         { // 体力2になった場合
             Destroy(imageObj_Health_3); // 3つめのアイコンを消去
@@ -33,5 +43,10 @@ public class GameManager : MonoBehaviour
         }
     }
 
+	public static void HpInheritance()
+	{ 
+
+		GameManager.singleton.SetPlayerHealthUI();
+	}
 
 }
