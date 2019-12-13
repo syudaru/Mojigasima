@@ -2,18 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GuAttack : MonoBehaviour
+public class GuAttackBoss : MonoBehaviour
 {
 	public float speed = 0.1f;
-    // Start is called before the first frame update
-    void Start()
-    {
+	// Start is called before the first frame update
+	void Start()
+	{
 
 	}
 
-    // Update is called once per frame
-    void Update()
-    {
+	// Update is called once per frame
+	void Update()
+	{
 		//Hierarchy WindowからPlayerTagの付いたアクティブ状態のオブジェクトを探して二点間の距離を取得して追う
 		GameObject target = GameObject.FindWithTag("Player");
 		float following = Time.deltaTime * speed;
@@ -30,3 +30,4 @@ public class GuAttack : MonoBehaviour
 		}
 	}
 }
+
